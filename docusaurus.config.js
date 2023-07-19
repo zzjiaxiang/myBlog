@@ -77,13 +77,19 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            label: '笔记',
             position: 'left',
-            label: 'Tutorial',
+            docId: 'note/css/background',
+            // items: [
+            //   {
+            //     label: '笔记',
+            //     to: 'docs/intro/',
+            //   },
+            // ]
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/zzjiaxiang',
             label: 'GitHub',
             position: 'right',
           },
