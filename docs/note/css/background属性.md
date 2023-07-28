@@ -1,7 +1,7 @@
 ---
 id: background
 slug: /background
-title: CSS-background-渐变
+title: background
 date: 2023-7-4
 authors: ZhangJiaxiang
 tags: [css,background,linear-gradient,radial-gradient,conic-gradient]
@@ -57,3 +57,5 @@ repeating-conic-gradient(red 0 10deg, blue 10deg 20deg);
 与线性渐变和径向渐变不同，线性渐变和径向渐变的颜色断点是通过指定 [length](https://developer.mozilla.org/zh-CN/docs/Web/CSS/length) 来放置的，而锥形渐变的颜色断点是通过 [angle](https://developer.mozilla.org/zh-CN/docs/Web/CSS/angle) 来指定的。单位包括度的 `deg`、梯度的 `grad`、弧度的 `rad`和圈的 `turn`。在一个圆中有 360 度，400 个梯度，2π 弧度，1 圈。支持锥形渐变的浏览器也接受百分比值，100% 等于 360 度，但这不在规范中。
 :::
 ![](https://png.zjiaxiang.cn/blog/20230719171653.png)
+
+[示例代码](https://codepen.io/zzjiaxiang/pen/OJajWry)

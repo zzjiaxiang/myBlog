@@ -20,7 +20,9 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'note/css/background'
+        'note/css/background',
+        'note/css/Pseudo-classes',
+        'note/css/Pseudo-elements'
       ]
     }
   ]
