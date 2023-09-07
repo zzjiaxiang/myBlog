@@ -3,16 +3,16 @@ const sidebars = {
 
   intro: [
     // 'note/introduction',
-    // {
-    //   label: 'JS',
-    //   type: 'category',
-    //   link: {
-    //     type: 'generated-index',
-    //   },
-    //   items: [
-    //     'note/js/test'
-    //   ]
-    // },
+    {
+      label: 'JavaScript',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'note/js/network-request',
+      ]
+    },
     {
       label: 'CSS',
       type: 'category',
