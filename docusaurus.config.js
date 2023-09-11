@@ -79,13 +79,7 @@ const config = {
             type: 'doc',
             label: '笔记',
             position: 'left',
-            docId: 'note/css/background',
-            items: [
-              {
-                label: '笔记',
-                to: 'docs/intro/',
-              },
-            ]
+            docId:'note/readme',
           },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {

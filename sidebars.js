@@ -2,7 +2,7 @@
 const sidebars = {
 
   intro: [
-    // 'note/introduction',
+    'note/readme',
     {
       label: 'JavaScript',
       type: 'category',
