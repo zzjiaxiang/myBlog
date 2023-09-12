@@ -23,7 +23,8 @@ const sidebars = {
         'note/css/background',
         'note/css/Pseudo-classes',
         'note/css/Pseudo-elements',
-        'note/css/css-selectors'
+        'note/css/css-selectors',
+        'note/css/google-login'
       ]
     }
   ]
