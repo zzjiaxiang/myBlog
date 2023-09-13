@@ -1,0 +1,8 @@
+/.docusaurus
+.vscode
+/build
+/node_modules
+/static
+yarn.lock
+package.json
+.gitignore
