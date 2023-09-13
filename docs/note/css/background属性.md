@@ -1,11 +1,13 @@
 ---
 id: background
-slug: /background
 title: background
 date: 2023-7-4
-authors: ZhangJiaxiang
 tags: [css,background,linear-gradient,radial-gradient,conic-gradient]
 keywords: [css, background,linear-gradient,radial-gradient,conic-gradient]
+description: css background属性介绍
+last_update:
+  date: 9/14/2023
+  author: ZhangJiaxiang
 ---
 ## [linear-gradient 线性渐变](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/linear-gradient)
 
