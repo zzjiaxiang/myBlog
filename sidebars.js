@@ -26,7 +26,17 @@ const sidebars = {
         'note/css/css-selectors',
         'note/css/google-login'
       ]
-    }
+    },
+    {
+      label: 'Other',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'other/docusaurus-syntax',
+      ]
+    },
   ]
   ,
 };
