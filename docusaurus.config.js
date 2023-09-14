@@ -69,6 +69,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: '',
+        hideOnScroll: true,
         logo: {
           alt: 'My Site Logo',
           src: 'img/myIcon.jpeg',
