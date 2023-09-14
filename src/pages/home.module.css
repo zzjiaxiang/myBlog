@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+.content{
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+.animation{
+  z-index: 1;
+}

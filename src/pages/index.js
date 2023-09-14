@@ -1,25 +1,9 @@
 import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
+import Lottie from "lottie-react";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import groovyWalkAnimation from "../../static/img/x0nV1KRGDm.json";
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-        </div>
-      </div>
-    </header>
-  );
-}
+import styles from './home.module.css';
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
@@ -27,9 +11,11 @@ export default function Home() {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      <main className={styles.main}>
+        <div className={styles.content}>
+          欢迎你👏
+        </div>
+      < Lottie animationData={groovyWalkAnimation} loop={true} className={styles.animation}/>
       </main>
     </Layout>
   );

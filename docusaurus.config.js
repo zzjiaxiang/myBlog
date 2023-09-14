@@ -68,19 +68,20 @@ const config = {
       // },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: '',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/myIcon.jpeg',
+          style: {borderRadius: '50%'}
         },
         items: [
           {
             type: 'doc',
             label: '笔记',
-            position: 'left',
+            position: 'right',
             docId:'note/readme',
           },
-          {to: 'blog', label: '博客', position: 'left'},
+          {to: 'blog', label: '博客', position: 'right'},
           {
             href: 'https://github.com/zzjiaxiang',
             label: 'GitHub',
