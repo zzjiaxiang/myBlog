@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'zjx Site',
   tagline: 'zjx blog',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/myIcon.jpeg',
   url: 'https://www.zjiaxiang.cn',
   baseUrl: '/',
   organizationName: 'zzjiaxiang',
