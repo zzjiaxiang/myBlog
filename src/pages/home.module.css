@@ -9,4 +9,5 @@
 }
 .animation{
   z-index: 1;
+  will-change: transform;
 }
