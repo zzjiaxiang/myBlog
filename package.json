@@ -19,15 +19,22 @@
     "@docusaurus/preset-classic": "2.4.1",
     "@docusaurus/theme-search-algolia": "^2.4.1",
     "@mdx-js/react": "^1.6.22",
+    "@zzjiaxiang/eslint-config": "^1.0.16",
     "clsx": "^1.2.1",
+    "docusaurus-plugin-sass": "^0.2.5",
     "lottie-react": "^2.4.0",
     "prism-react-renderer": "^1.3.5",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sass": "^1.67.0"
   },
   "devDependencies": {
     "@docusaurus/eslint-plugin": "^2.4.1",
-    "@docusaurus/module-type-aliases": "2.4.1"
+    "@docusaurus/module-type-aliases": "2.4.1",
+    "@tsconfig/docusaurus": "^2.0.1",
+    "eslint": "^8.49.0",
+    "typescript": "^5.2.2",
+    "typescript-plugin-css-modules": "^5.0.1"
   },
   "browserslist": {
     "production": [

@@ -1,3 +1,4 @@
 {
-  "extends": ["plugin:@docusaurus/recommended"]
+  "root": true,
+  "extends": ["plugin:@docusaurus/recommended","@zzjiaxiang"]
 }

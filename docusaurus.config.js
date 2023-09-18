@@ -1,5 +1,5 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -13,7 +13,7 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
+  plugins: ['docusaurus-plugin-sass'],
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['en', 'zh-CN'],
@@ -37,11 +37,11 @@ const config = {
         },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          showLastUpdateTime:true,
-          showLastUpdateAuthor:true
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         blog: {
-          showReadingTime: true
+          showReadingTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -73,20 +73,30 @@ const config = {
         logo: {
           alt: 'My Site Logo',
           src: 'img/myIcon.jpeg',
-          style: {borderRadius: '50%'}
+          style: { borderRadius: '50%' },
         },
         items: [
           {
             type: 'doc',
             label: '笔记',
             position: 'right',
-            docId:'note/readme',
+            docId: 'note/readme',
           },
-          {to: 'blog', label: '博客', position: 'right'},
+          { to: 'blog', label: '博客', position: 'right' },
+          {
+            label: '更多',
+            position: 'right',
+            items: [
+              {
+                label: '网站资源',
+                to: 'resource',
+              },
+            ],
+          },
           {
             href: 'https://github.com/zzjiaxiang',
             label: 'GitHub',
-            position: 'right'
+            position: 'right',
           },
         ],
       },
@@ -137,6 +147,6 @@ const config = {
         indexName: 'zjiaxiang',
       },
     }),
-};
+}
 
-module.exports = config;
+module.exports = config
