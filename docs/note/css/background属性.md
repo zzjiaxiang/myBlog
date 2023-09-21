@@ -1,7 +1,6 @@
 ---
 id: background
 title: background
-date: 2023-7-4
 tags: [css,background,linear-gradient,radial-gradient,conic-gradient]
 keywords: [css, background,linear-gradient,radial-gradient,conic-gradient]
 description: css background属性介绍
