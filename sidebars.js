@@ -22,6 +22,7 @@ const sidebars = {
         'note/css/Pseudo-elements',
         'note/css/css-selectors',
         'note/css/google-login',
+        'note/css/content-visibility',
       ],
     },
     {
