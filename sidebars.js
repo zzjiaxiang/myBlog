@@ -23,6 +23,7 @@ const sidebars = {
         'note/css/css-selectors',
         'note/css/google-login',
         'note/css/content-visibility',
+        'note/css/grid',
       ],
     },
     {
