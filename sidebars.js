@@ -24,6 +24,7 @@ const sidebars = {
         'note/css/google-login',
         'note/css/content-visibility',
         'note/css/grid',
+        'note/css/form-sizing',
       ],
     },
     {
