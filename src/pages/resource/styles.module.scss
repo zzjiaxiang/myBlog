@@ -2,3 +2,45 @@
   display: flex;
   margin: 50px 10% 0 10%;
 }
+.main{
+  flex: 1;
+}
+.mainContent{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+
+  gap: 2em;
+}
+.mainItems{
+  display: flex;
+  padding: 12px;
+  transition: transform .3s ease-in-out;
+  background-color: var(--ifm-card-background-color);
+  border: 1px solid hsla(0,0%,80%,.5);
+  border-radius: 8px;
+  & >div{
+    max-width: calc(100% - 64px);
+    padding-left: 15px;
+    a{
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p{
+      display: -webkit-box;
+      font-size: 13px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+  }
+  img{
+    width: 64px;
+    height: 64px;
+  }
+  &:hover{
+    transform: translate3d(0,-5px,0);
+    box-shadow: var(--ifm-color-primary-hover);
+  }
+}

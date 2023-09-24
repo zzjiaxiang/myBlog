@@ -1,18 +1,41 @@
 import React from 'react'
 import Layout from '@theme/Layout'
 import styles from './styles.module.scss'
-import { aside } from '@site/static/dadas/resource'
+import { aside, mainData } from '@site/static/data/resource'
 function Aside() {
   return (
     <div>
-      {aside.map((item) => (
-        <div>{item.name}</div>
+      {aside.map(({ name, id }) => (
+        <div key={id}>{name}</div>
       ))}
     </div>
   )
 }
 function Main() {
-  return <div>开发中</div>
+  return (
+    <div className={styles.main}>
+      {mainData.map(({ name, resources }) => (
+        <div key={name}>
+          <h1>{name}</h1>
+          <section>
+            <div className={styles.mainContent}>
+              {resources.map(({ id, describe, img, link, title }) => (
+                <div className={styles.mainItems} key={id}>
+                  <img src={img} alt={title}></img>
+                  <div>
+                    <a href={link} target="_blank">
+                      {title}
+                    </a>
+                    <p title={describe}>{describe}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+      ))}
+    </div>
+  )
 }
 export default function Resource() {
   return (
