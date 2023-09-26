@@ -15,6 +15,11 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-color-primary-hover: 0 10px 20px -10px rgba(0,0,0,.2);
   --ifm-code-font-size: 95%;
+  --ifm-width-scrollbar:7px;
+  --ifm-background-thumb:silver;
+  --ifm-border-radius-thumb:10px;
+  --ifm-background-track:#f1f1f1;
+  --ifm-border-radius-track:10px;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -32,4 +37,17 @@
 }
 p{
   margin: 0;
+}
+::-webkit-scrollbar{
+  width: var(--ifm-width-scrollbar);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-background-thumb);
+  border-radius: var(--ifm-border-radius-thumb);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ifm-background-track);
+  border-radius: var(--ifm-border-radius-track);
 }

@@ -1,14 +1,21 @@
 import React from 'react'
 import Layout from '@theme/Layout'
+import Link from '@docusaurus/Link'
 import styles from './styles.module.scss'
 import { aside, mainData } from '@site/static/data/resource'
 function Aside() {
   return (
-    <div>
-      {aside.map(({ name, id }) => (
-        <div key={id}>{name}</div>
-      ))}
-    </div>
+    <aside>
+      <nav className={styles.aside}>
+        <ul>
+          {aside.map(({ name, id }) => (
+            <li key={id}>
+              <Link href={`#${name}`}>{name}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </aside>
   )
 }
 function Main() {
@@ -16,16 +23,16 @@ function Main() {
     <div className={styles.main}>
       {mainData.map(({ name, resources }) => (
         <div key={name}>
-          <h1>{name}</h1>
+          <h1 id={name}>
+            <a href={`#${name}`}>{name}</a>
+          </h1>
           <section>
             <div className={styles.mainContent}>
               {resources.map(({ id, describe, img, link, title }) => (
                 <div className={styles.mainItems} key={id}>
                   <img src={img} alt={title}></img>
                   <div>
-                    <a href={link} target="_blank">
-                      {title}
-                    </a>
+                    <Link href={link}>{title}</Link>
                     <p title={describe}>{describe}</p>
                   </div>
                 </div>

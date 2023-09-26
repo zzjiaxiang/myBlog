@@ -1,14 +1,18 @@
 .content{
   display: flex;
-  margin: 50px 10% 0 10%;
+  margin: 50px 6% 0 6%;
 }
 .main{
   flex: 1;
+  padding-left: 32px;
+  margin-bottom: 20px;
+  &>div{
+    margin-bottom: 20px;
+  }
 }
 .mainContent{
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
-
   gap: 2em;
 }
 .mainItems{
@@ -42,5 +46,20 @@
   &:hover{
     transform: translate3d(0,-5px,0);
     box-shadow: var(--ifm-color-primary-hover);
+  }
+}
+.aside{
+  width: 180px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 50px);
+  max-height: calc(100vh - var(--ifm-navbar-height));
+  &>ul{
+    list-style: none;
+    padding-left: 0;
+    li a{
+      color: var(--ifm-font-color-base)
+    }
   }
 }
