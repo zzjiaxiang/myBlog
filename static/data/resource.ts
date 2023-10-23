@@ -27,6 +27,14 @@ export const aside: asideType[] = [
   },
   {
     id: 4,
+    name: "画图工具"
+  },
+  {
+    id: 5,
+    name: "Al助手"
+  },
+  {
+    id: 99,
     name: "其他"
   }
 ]
@@ -44,7 +52,7 @@ export const mainData: mainType[] = [
     ]
   },
   {
-    name: "图标动画素材",
+    name: "图标-动画素材",
     resources: [
       {
         id: 1,
@@ -134,6 +142,72 @@ export const mainData: mainType[] = [
         describe: "ECharts图表集,ECharts demo集,echarts gallery社区",
         img: 'https://www.isqqw.com/favicon.ico',
         link: "https://www.isqqw.com/"
+      }
+    ]
+  },
+  {
+    name: "画图工具",
+    resources: [
+      {
+        id: 1,
+        title: 'draw.io',
+        describe: "一个免费的在线绘图应用程序和流程图制作程序。您可以使用它来创建UML、实体关系、组织结构图、BPMN和BPM、数据库模式和网络。也可能是电信网络、工作流程、流程图、地图叠加和GIS、电子电路图和社交网络图",
+        img: 'https://www.drawio.com/favicon.ico',
+        link: "https://www.drawio.com/"
+      },
+      {
+        id: 2,
+        title: 'draw.io',
+        describe: "一个免费的即时协作绘图工具。",
+        img: 'https://www.tldraw.com/favicon-32x32.png',
+        link: "https://www.tldraw.com/"
+      },
+      {
+        id: 3,
+        title: 'MindLine思维导图',
+        describe: "思维导图,逻辑思维,头脑风暴,流程图,结构图,文字大纲,脑图,幕布,mindline,mindmap,mindnode,xmind,mindmaster",
+        img: 'https://www.mindline.cn/res/icon.png',
+        link: "https://www.mindline.cn/"
+      }
+    ]
+  },
+  {
+    name: "Al助手",
+    resources: [
+      {
+        id: 1,
+        title: '通义千问',
+        describe: "通义千问，LLM，语言大模型，阿里巴巴大模型，达摩院，文生文，自然语言处理",
+        img: 'https://img.alicdn.com/imgextra/i4/O1CN01c26iB51UyR3MKMFvk_!!6000000002586-2-tps-124-122.png',
+        link: "https://qianwen.aliyun.com/"
+      },      
+      {
+        id: 2,
+        title: '文心一言',
+        describe: "百度大语言模型",
+        img: 'https://nlp-eb.cdn.bcebos.com/logo/favicon.ico',
+        link: "https://yiyan.baidu.com/"
+      },
+      {
+        id: 3,
+        title: 'Bard - Google 推出的对话式 AI 工具，由 PaLM 2 技术驱动',
+        describe: "这是一款 Google 推出的协作式 AI 工具，由 PaLM 2 技术驱动，可帮助你实现创意构想。",
+        img: 'https://www.gstatic.com/lamda/images/favicon_v1_150160cddff7f294ce30.svg',
+        link: "https://bard.google.com/"
+      },
+      {
+        id: 4,
+        title: 'ChatGPT',
+        describe: "ChatGPT是一个由OpenAI开发的人工智能语言模型，能够根据上下文和过去的对话生成类似人类的文本。",
+        img: 'https://chat.openai.com/favicon-32x32.png',
+        link: "https://chat.openai.com/"
+      },
+      {
+        id: 5,
+        title: 'PromptPerfect - Elevate Your Prompts to Perfection.',
+        describe: "专业一流的提示词工程开发工具",
+        img: 'https://promptperfect.jinaai.cn/icons/favicon-32x32.png',
+        link: "https://promptperfect.jinaai.cn/"
       }
     ]
   },
