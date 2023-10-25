@@ -34,6 +34,10 @@ export const aside: asideType[] = [
     name: "Al助手"
   },
   {
+    id: 6,
+    name: "在线接口 MOCK 平台"
+  },
+  {
     id: 99,
     name: "其他"
   }
@@ -220,6 +224,46 @@ export const mainData: mainType[] = [
         describe: "一个专注于前端视觉效果的集合应用，包含CSS动效、Canvas动画、Three.js3D、人工智能应用等上百个案例",
         img: 'https://hepengwei.cn/public/favicon.ico',
         link: "https://github.com/hepengwei/visualization-collection/"
+      }
+    ]
+  },
+  {
+    name: "在线接口 MOCK 平台",
+    resources: [
+      {
+        id: 1,
+        title: 'fastmock',
+        describe: "fastmock,接口实现,前后端分离,mock,在线mock,在线接口Mock平台",
+        img: 'https://www.fastmock.site/resource/images/favicon.ico',
+        link: "https://www.fastmock.site"
+      },
+      {
+        id: 2,
+        title: 'JSONPlaceholder',
+        describe: "Free Fake REST API",
+        img: 'https://jsonplaceholder.typicode.com/favicon.ico',
+        link: "https://jsonplaceholder.typicode.com/"
+      },
+      {
+        id: 3,
+        title: 'RAP2',
+        describe: "阿里前端的接口管理模拟平台",
+        img: 'http://rap2.taobao.org/favicon.png',
+        link: "http://rap2.taobao.org/"
+      },
+      {
+        id: 4,
+        title: 'httpbin.org',
+        describe: "测试 HTTP 请求和响应的各种信息，比如 cookie、ip、headers 和登录验证等，且支持 GET、POST 等多种方法，对 web 开发和测试很有帮助。",
+        img: 'https://httpbin.org/static/favicon.ico',
+        link: "https://httpbin.org/"
+      },
+      {
+        id: 5,
+        title: 'PokéAPI',
+        describe: "专门为Pokémon游戏信息而制作的免费RESTful API 。 它是迄今为止最大的免费神奇宝贝信息数据库，该API完全免费使用。",
+        img: 'https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png',
+        link: "https://pokeapi.co/"
       }
     ]
   }
