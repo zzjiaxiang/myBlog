@@ -16,8 +16,8 @@
   "dependencies": {
     "@docusaurus/core": "^2.4.3",
     "@docusaurus/plugin-sitemap": "^2.4.3",
-    "@docusaurus/preset-classic": "2.4.1",
-    "@docusaurus/theme-search-algolia": "^2.4.1",
+    "@docusaurus/preset-classic": "2.4.3",
+    "@docusaurus/theme-search-algolia": "^2.4.3",
     "@mdx-js/react": "^1.6.22",
     "@zzjiaxiang/eslint-config": "^1.0.16",
     "clsx": "^1.2.1",
@@ -29,8 +29,8 @@
     "sass": "^1.67.0"
   },
   "devDependencies": {
-    "@docusaurus/eslint-plugin": "^2.4.1",
-    "@docusaurus/module-type-aliases": "2.4.1",
+    "@docusaurus/eslint-plugin": "^2.4.3",
+    "@docusaurus/module-type-aliases": "2.4.3",
     "@tsconfig/docusaurus": "^2.0.1",
     "eslint": "^8.49.0",
     "typescript": "^5.2.2",
