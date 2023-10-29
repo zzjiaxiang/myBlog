@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 const config = {
   title: 'zjx Site',
   tagline: 'zjx blog',
-  favicon: 'img/myIcon.jpeg',
+  favicon: 'https://png.zjiaxiang.cn/wenjian/myIcon.jpeg',
   url: 'https://www.zjiaxiang.cn',
   baseUrl: '/',
   organizationName: 'zzjiaxiang',
@@ -72,7 +72,7 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'My Site Logo',
-          src: 'img/myIcon.jpeg',
+          src: 'https://png.zjiaxiang.cn/wenjian/myIcon.jpeg',
           style: { borderRadius: '50%' },
         },
         items: [

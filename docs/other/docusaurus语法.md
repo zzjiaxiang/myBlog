@@ -26,7 +26,7 @@ docusaurus里面有三种不同的方式展示图像：Markdown 语法、CJS req
 
 ```javascript
 // Markdown 语法
-![示例横幅](../../static/img/docusaurus.png)
+![示例横幅]('https://png.zjiaxiang.cn/wenjian/myIcon.jpeg')
 
 // CJS require
 <img
