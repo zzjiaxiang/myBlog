@@ -308,6 +308,13 @@ const DOCS = [
     img: 'https://developer.chrome.com/images/meta/apple-touch-icon.png',
     link: 'https://developer.chrome.com/',
   },
+  {
+    id: 6,
+    title: 'typescriptlang',
+    describe: '在线运行typescript',
+    img: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
+    link: '  https://www.typescriptlang.org/    ',
+  },
 ]
 const SERVER = [
   {

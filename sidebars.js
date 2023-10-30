@@ -11,6 +11,14 @@ const sidebars = {
       items: ['note/js/network-request'],
     },
     {
+      label: 'TypeScript',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: ['note/ts/TypeScript内置数据类型'],
+    },
+    {
       label: 'CSS',
       type: 'category',
       link: {
