@@ -313,7 +313,7 @@ const DOCS = [
     title: 'typescriptlang',
     describe: '在线运行typescript',
     img: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
-    link: '  https://www.typescriptlang.org/    ',
+    link: 'https://www.typescriptlang.org/',
   },
 ]
 const SERVER = [
