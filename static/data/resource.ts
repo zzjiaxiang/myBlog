@@ -165,6 +165,13 @@ const MAP = [
     img: 'https://www.isqqw.com/favicon.ico',
     link: 'https://www.isqqw.com/',
   },
+  {
+    id: 6,
+    title: 'makeapie echarts社区图表可视化案例',
+    describe: 'makeapie echarts图表可视化案例, 分享你的可视化作品',
+    img: 'https://www.makeapie.cn/favicon.ico',
+    link: 'https://www.makeapie.cn/echarts',
+  },
 ]
 const DRAWTOOLS = [
   {
