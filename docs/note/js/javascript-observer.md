@@ -72,7 +72,47 @@ observer.observe(target)
 :::
 
 ## [MutationObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver)
+MutationObserver 接口提供了监视对 DOM 树所做更改的能力。(包括节点属性的变化,节点中发生节新增与删除)
+简单示例
 
+```javascript
+// 观察器的配置（需要观察什么变动）
+const config = {
+  childList: true, 
+  subtree: true, 
+}
+
+// 当观察到变动时执行的回调函数
+const callback = (mutations, observer) => {
+  console.log({ mutations, observer })
+}
+
+// 创建一个观察器实例并传入回调函数
+const observer = new MutationObserver(callback)
+
+const target = document.getElementById('scrollArea')
+// 以上述配置开始观察目标节点
+observer.observe(targetNode, config);
+```
+### [observe](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver/observe)
+observe方法接受两个参数,第一个为观察节点,第二个为配置选项.配置选项有以下几个参数,配置项描述了 DOM 的哪些变化应该报告给 MutationObserver 的 callback。
+参数的具体作用点击标题可以查看具体文档
+- childList
+- attributes
+- characterData
+- subtree
+- attributeOldValue
+- characterDataOldValue
+
+### [callback](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver/MutationObserver#callback)
+创建观察器时传入的回调函数每当被指定的节点或子树以及配置项有 DOM 变动时会被调用。
+有两个参数
+- 所有被触发改动的[MutationRecord]对象数组(https://developer.mozilla.org/zh-CN/docs/Web/API/MutationRecord)这个参数很重要,经常来利用它里面的参数来判断对某个元素的属性或着dom是否发生变化.
+- 调用该函数的 MutationObserver 对象.
+
+:::tip
+在前端开发水印时,利用这个API特性对生成的水印元素进行监听,以便在水印元素被删除时能够重新渲染水印.
+:::
 ## [ResizeObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/ResizeObserver)
 
 ## [PerformanceObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/PerformanceObserver)
