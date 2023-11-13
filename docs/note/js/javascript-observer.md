@@ -113,6 +113,24 @@ observe方法接受两个参数,第一个为观察节点,第二个为配置选�
 :::tip
 在前端开发水印时,利用这个API特性对生成的水印元素进行监听,以便在水印元素被删除时能够重新渲染水印.
 :::
-## [ResizeObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/ResizeObserver)
+
+## [ResizeObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/Resize_Observer_API)
+
+Resize Observer API 可以监视元素的大小更改，并且每次大小更改时都会向回调函数传递最新监听元素的大小信息。
+
+
+简单示例
+```javascript
+const resizeObserver = new ResizeObserver(entries => {
+  for (const entry of entries) {
+    console.log(entry.contentRect);
+  }
+});
+
+resizeObserver.observe(document.querySelector('.box'));
+```
+用法和上面两个API基本一样具体的参数可以[查看文档](https://developer.mozilla.org/zh-CN/docs/Web/API/ResizeObserver),值得一提的是 ResizeObserver 避免了通过在回调函数内部去调整元素大小带来的无限循环.
 
 ## [PerformanceObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/PerformanceObserver)
+
+PerformanceObserver 可以获取到与当前页面中性能相关的信息.
