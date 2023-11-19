@@ -8,7 +8,11 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['note/js/network-request', 'note/js/javascript-observer'],
+      items: [
+        'note/js/network-request',
+        'note/js/xlsx',
+        'note/js/javascript-observer',
+      ],
     },
     {
       label: 'TypeScript',
