@@ -73,6 +73,14 @@ const CSS = [
     img: 'https://frontendin.com/wp-content/uploads/2020/04/cropped-signs-2-32x32.png',
     link: 'https://frontendin.com/',
   },
+  {
+    id: 4,
+    title: 'CSS-Tricks',
+    describe:
+      ' 提供了关于网页设计和开发的教程、技巧、工具和资源。该网站的重点之一是CSS',
+    img: 'https://css-tricks.com/favicon.svg',
+    link: 'https://css-tricks.com/',
+  },
 ]
 const icon = [
   {
@@ -275,6 +283,13 @@ const MOCK = [
       '专门为Pokémon游戏信息而制作的免费RESTful API 。 它是迄今为止最大的免费神奇宝贝信息数据库，该API完全免费使用。',
     img: 'https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png',
     link: 'https://pokeapi.co/',
+  },
+  {
+    id: 5,
+    title: 'Lorem Picsum',
+    describe: '随机生成照片',
+    img: 'https://picsum.photos/assets/images/favicon/favicon-32x32.png',
+    link: 'https://picsum.photos/',
   },
 ]
 const DOCS = [
