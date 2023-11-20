@@ -12,6 +12,7 @@ const sidebars = {
         'note/js/network-request',
         'note/js/xlsx',
         'note/js/javascript-observer',
+        'note/js/canvasapi',
       ],
     },
     {
