@@ -24,7 +24,7 @@ function Main() {
       {mainData.map(({ name, resources }) => (
         <div key={name}>
           <h1 id={name}>
-            <a href={`#${name}`}>{name}</a>
+            <Link to={`#${name}`}>{name}</Link>
           </h1>
           <section>
             <div className={styles.mainContent}>
@@ -32,7 +32,7 @@ function Main() {
                 <div className={styles.mainItems} key={id}>
                   <img src={img} alt={title}></img>
                   <div>
-                    <Link href={link}>{title}</Link>
+                    <Link to={link}>{title}</Link>
                     <p title={describe}>{describe}</p>
                   </div>
                 </div>
