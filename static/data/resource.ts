@@ -46,6 +46,10 @@ export const aside: asideType[] = [
     name: '在线部署',
   },
   {
+    id: 9,
+    name: 'ECharts网站集',
+  },
+  {
     id: 99,
     name: '其他',
   },
@@ -161,20 +165,6 @@ const MAP = [
   },
   {
     id: 4,
-    title: 'Apache ECharts',
-    describe: '一个基于 JavaScript 的开源可视化图表库',
-    img: 'https://echarts.apache.org/zh/images/favicon.png',
-    link: 'https://echarts.apache.org/zh/index.html',
-  },
-  {
-    id: 5,
-    title: 'ECharts demo集',
-    describe: 'ECharts图表集,ECharts demo集,echarts gallery社区',
-    img: 'https://www.isqqw.com/favicon.ico',
-    link: 'https://www.isqqw.com/',
-  },
-  {
-    id: 6,
     title: 'makeapie echarts社区图表可视化案例',
     describe: 'makeapie echarts图表可视化案例, 分享你的可视化作品',
     img: 'https://www.makeapie.cn/favicon.ico',
@@ -245,6 +235,14 @@ const AL = [
     img: 'https://promptperfect.jinaai.cn/icons/favicon-32x32.png',
     link: 'https://promptperfect.jinaai.cn/',
   },
+  {
+    id: 6,
+    title: 'Poe可让您提问、获得即时回答、并与AI机器人互动对话',
+    describe:
+      '提供GPT-4、gpt-3.5-turbo、Anthropic Claude以及其他多种机器人的访问权限。',
+    img: 'https://psc2.cf2.poecdn.net/favicon.svg',
+    link: 'https://poe.com/',
+  },
 ]
 const MOCK = [
   {
@@ -285,7 +283,7 @@ const MOCK = [
     link: 'https://pokeapi.co/',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Lorem Picsum',
     describe: '随机生成照片',
     img: 'https://picsum.photos/assets/images/favicon/favicon-32x32.png',
@@ -416,6 +414,37 @@ const OTHER = [
     link: 'https://xlog.app',
   },
 ]
+const ECharts = [
+  {
+    id: 1,
+    title: 'Apache ECharts',
+    describe: '一个基于 JavaScript 的开源可视化图表库',
+    img: 'https://echarts.apache.org/zh/images/favicon.png',
+    link: 'https://echarts.apache.org/zh/index.html',
+  },
+  {
+    id: 2,
+    title: 'isqqw ECharts demo集',
+    describe: 'ECharts图表集,ECharts demo集,echarts gallery社区',
+    img: 'https://www.isqqw.com/favicon.ico',
+    link: 'https://www.isqqw.com/',
+  },
+  {
+    id: 3,
+    title: 'madeapie',
+    describe:
+      'echarts, 可视化数据，图表，图表制作，echarts图表制作，Make A Pie，Made A Pie，echarts案例，echarts教程',
+    img: 'https://madeapie.com/favicon.ico',
+    link: 'https://madeapie.com/',
+  },
+  {
+    id: 4,
+    title: 'makeapie echarts社区图表可视化案例',
+    describe: 'makeapie echarts图表可视化案例, 分享你的可视化作品',
+    img: 'https://www.makeapie.cn/favicon.ico',
+    link: 'https://www.makeapie.cn/',
+  },
+]
 export const mainData: mainType[] = [
   {
     name: 'CSS',
@@ -428,6 +457,10 @@ export const mainData: mainType[] = [
   {
     name: '流程图',
     resources: MAP,
+  },
+  {
+    name: 'ECharts网站集',
+    resources: ECharts,
   },
   {
     name: '画图工具',
