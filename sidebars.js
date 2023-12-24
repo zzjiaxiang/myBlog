@@ -24,6 +24,14 @@ const sidebars = {
       items: ['note/ts/TypeScript内置数据类型'],
     },
     {
+      label: '数据处理',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: ['note/process-data/process-data-structure'],
+    },
+    {
       label: 'CSS',
       type: 'category',
       link: {
