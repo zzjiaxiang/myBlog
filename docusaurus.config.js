@@ -144,7 +144,7 @@ const config = {
       },
       algolia: {
         appId: 'D1NP13ZOC9',
-        apiKey: '76f80e365e39eb2b8ad9f0683ce069c2',
+        apiKey: '52b0703da4acea20a6a2cfa31006e9c7',
         indexName: 'zjiaxiang',
       },
     }),
