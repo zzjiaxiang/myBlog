@@ -143,8 +143,8 @@ const config = {
         defaultLanguage: 'javascript',
       },
       algolia: {
-        appId: 'D1NP13ZOC9',
-        apiKey: '52b0703da4acea20a6a2cfa31006e9c7',
+        appId: 'BVQJGT9WCV',
+        apiKey: 'f0f5fe6ade9f5fab830487a39130661c',
         indexName: 'zjiaxiang',
       },
     }),
