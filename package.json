@@ -20,7 +20,6 @@
     "@docusaurus/theme-live-codeblock": "^3.0.1",
     "@docusaurus/theme-search-algolia": "^3.0.1",
     "@mdx-js/react": "^3.0.0",
-    "@zzjiaxiang/eslint-config": "^1.0.16",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
     "lottie-react": "^2.4.0",
@@ -33,6 +32,7 @@
     "@docusaurus/eslint-plugin": "^3.0.1",
     "@docusaurus/module-type-aliases": "3.0.1",
     "@tsconfig/docusaurus": "^2.0.2",
+    "@zzjiaxiang/eslint-config": "^1.0.16",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3",
     "typescript-plugin-css-modules": "^5.0.2"
