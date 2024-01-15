@@ -11,6 +11,7 @@ const sidebars = {
       items: [
         'note/js/network-request',
         'note/js/xlsx',
+        'note/js/event-delegation',
         'note/js/javascript-observer',
         'note/js/canvasapi',
       ],
