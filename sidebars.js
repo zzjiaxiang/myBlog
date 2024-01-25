@@ -25,6 +25,14 @@ const sidebars = {
       items: ['note/ts/TypeScript内置数据类型'],
     },
     {
+      label: 'HTML',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: ['note/html/element-dialog'],
+    },
+    {
       label: '数据处理',
       type: 'category',
       link: {
