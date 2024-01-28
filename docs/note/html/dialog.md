@@ -9,11 +9,13 @@ last_update:
   author: ZhangJiaxiang
 ---
 
-在遇到需要弹窗的场景,我们经常使用*element*,或者*ant-design*,里面封装的dialog组件.截止自 2022 年 3 月起所有的浏览器都已经支持原生的dialog元素,那么我们就可以使用原生的dialog元素,来实现弹窗功能.
+在遇到需要弹窗的场景,我们经常使用*element*,或者*ant-design*,里面封装的dialog组件.
+
+截止自 2022 年 3 月起所有的浏览器都已经支持原生的dialog元素,那么我们就可以使用原生的dialog元素,来实现弹窗功能.
 
 ## [原生弹窗dialog的使用](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 
-在react中的简单使用
+在react中的使用示例如下:
 
 ```jsx live
 function Clock(props) {
@@ -51,6 +53,21 @@ function Clock(props) {
 
 ## 属性方法
 
-可以通过**showModal**和**show**方法,可以打开.**close**方法关闭.
+可以通过**showModal**和**show**方法,可以打开.**close**方法关闭弹窗.
 
 *dialog*也提供了一个**open**属性来控制它的打开状态,但是官方不建议我们通过切换**open**属性来控制*dialog*的打开状态.
+
+通过showModal方法打开弹窗后可以通过**backdrop**伪元素来修改弹窗的背景样式.
+
+```css
+::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+```
