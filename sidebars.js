@@ -14,6 +14,7 @@ const sidebars = {
         'note/js/event-delegation',
         'note/js/javascript-observer',
         'note/js/canvasapi',
+        'note/js/Equality_comparisons',
       ],
     },
     {
