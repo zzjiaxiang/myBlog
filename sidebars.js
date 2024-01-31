@@ -31,7 +31,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['note/html/element-dialog'],
+      items: ['note/html/element-dialog', 'note/html/html-dialog'],
     },
     {
       label: '数据处理',
