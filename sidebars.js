@@ -64,7 +64,11 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['other/docusaurus-syntax', 'other/chrome-devtools'],
+      items: [
+        'other/docusaurus-syntax',
+        'other/chrome-devtools',
+        'other/WebPerformance',
+      ],
     },
   ],
 }

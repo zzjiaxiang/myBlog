@@ -90,7 +90,7 @@ const callback = (mutations, observer) => {
 // 创建一个观察器实例并传入回调函数
 const observer = new MutationObserver(callback)
 
-const target = document.getElementById('scrollArea')
+const targetNode = document.getElementById('scrollArea')
 // 以上述配置开始观察目标节点
 observer.observe(targetNode, config);
 ```
@@ -107,7 +107,7 @@ observe方法接受两个参数,第一个为观察节点,第二个为配置选�
 ### [callback](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver/MutationObserver#callback)
 创建观察器时传入的回调函数每当被指定的节点或子树以及配置项有 DOM 变动时会被调用。
 有两个参数
-- 所有被触发改动的[MutationRecord]对象数组(https://developer.mozilla.org/zh-CN/docs/Web/API/MutationRecord)这个参数很重要,经常来利用它里面的参数来判断对某个元素的属性或着dom是否发生变化.
+- 所有被触发改动的[MutationRecord](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationRecord)对象数组这个参数很重要,经常来利用它里面的参数来判断对某个元素的属性或着dom是否发生变化.
 - 调用该函数的 MutationObserver 对象.
 
 :::tip
