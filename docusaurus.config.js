@@ -6,7 +6,7 @@ const darkCodeTheme = themes.dracula
 const config = {
   title: 'zjx Site',
   tagline: 'zjx blog',
-  favicon: 'https://png.zjiaxiang.cn/wenjian/myIcon.jpeg',
+  favicon: 'https://png.zjiaxiang.cn/wenjian/myIcon.webp',
   url: 'https://www.zjiaxiang.cn',
   baseUrl: '/',
   organizationName: 'zzjiaxiang',
@@ -73,7 +73,7 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: 'My Site Logo',
-          src: 'https://png.zjiaxiang.cn/wenjian/myIcon.jpeg',
+          src: 'https://png.zjiaxiang.cn/wenjian/myIcon.webp',
           style: { borderRadius: '50%' },
         },
         items: [

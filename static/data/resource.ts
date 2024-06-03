@@ -146,7 +146,7 @@ const MAP = [
     id: 1,
     title: 'leader-line',
     describe: '在网页中绘制引导线。',
-    img: 'https://png.zjiaxiang.cn/wenjian/myIcon.jpeg',
+    img: 'https://png.zjiaxiang.cn/wenjian/myIcon.webp',
     link: 'https://anseki.github.io/leader-line/',
   },
   {
