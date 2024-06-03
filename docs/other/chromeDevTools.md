@@ -11,7 +11,7 @@ last_update:
 
 这里列举一些能提高开发者效率的chrome-devtools调试技巧,暂时列举这么多,后面用到会继续加上.查看chrome-devtools每个版本的新功能点击[这里](https://developer.chrome.com/tags/new-in-devtools/). 许多内容参考了这本[小册](https://juejin.cn/book/6844733783166418958?enter_from=course_center&utm_source=course_center).
 
-## [简化了本地修改网络响应表头和内容 117](https://developer.chrome.com/blog/new-in-devtools-117/?utm_source=devtools#xhr-fetch)
+## [简化了本地修改网络响应表头和内容 117](https://developer.chrome.com/docs/devtools/overrides?hl=zh-cn)
 
 通过自定义修改网络响应表头和内容能让我们在不修改接口的情况下去模拟返回的数据,这个功能以前就有,但是这次更新简化了操作.
 
