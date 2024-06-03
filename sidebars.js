@@ -59,6 +59,14 @@ const sidebars = {
       ],
     },
     {
+      label: 'Http',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: ['note/http/httpCache', 'note/http/httpVersion'],
+    },
+    {
       label: 'Other',
       type: 'category',
       link: {
