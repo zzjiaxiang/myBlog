@@ -64,7 +64,11 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['note/http/httpCache', 'note/http/httpVersion'],
+      items: [
+        'note/http/httpCache',
+        'note/http/httpVersion',
+        'note/http/httpStatus',
+      ],
     },
     {
       label: 'Other',
