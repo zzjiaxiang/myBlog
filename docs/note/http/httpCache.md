@@ -42,8 +42,12 @@ Cache-Control 通用消息头字段，被用于在 http 请求和响应中，通
 ### 单页面应用缓存方法
 无论使用vue或者react框架,都会使用到webpack 等构建工具可以[自动执行向资源网址分配哈希指纹的过程](https://webpack.js.org/guides/caching/#output-filenames)。
 
-即前端打包后的生成一个`index.html`(这个文件会引入所有的css,js文件),我们在`index.html`响应消息中添加 `Cache-Control: no-cache`,表示需要走协商缓存,同时设置 Last-Modified 或 ETag 中一个,建议 ETag.
+即前端打包后的生成一个`index.html`(这个文件会引入所有的css,js文件),服务端在`index.html`响应消息中添加 `Cache-Control: no-cache`,表示需要走协商缓存,同时设置 Last-Modified 或 ETag 中一个(用于协商缓存),建议 ETag.
 
 其他的js,css文件都会嵌入文件哈希值(会随着文件内容的改变而发生变化),例如:`style.x234dff.css`,这样我们在它的响应头中可以添加`Cache-Control: max-age=31536000`(即告诉浏览器这个资源在一年内无需请求,可以直接使用缓存内容.)
 
 这样一来再升级更新时,假设我们只修改一处样式从而引起了一个style文件哈希值发生变化,同时index.html文件内容也发生了变化(因为index文件会引入style文件),用户在请求时,因为index文件走的是协商缓存`no-cache`,需要发送一次请求验证,文件内容发生变化,从而 Last-Modified 或 ETag 都会发生变化,浏览器返回新的资源同时返回200.而哈希值没有发生变化的那些js,css文件因为缓存时间是31536000(一年),所以浏览器会直接使用缓存,从而不会发起请求.
+
+
+### [参考](https://web.dev/articles/http-cache?hl=zh-cn#browser-compatibility)
+### [Google 如何利用“在重新验证时过时”功能提升广告效果](https://web.dev/case-studies/ads-case-study-stale-while-revalidate?hl=zh-cn)
