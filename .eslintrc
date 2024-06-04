@@ -4,6 +4,6 @@
   "extends": ["plugin:@docusaurus/recommended"],
   "parserOptions": {
     "project": "./tsconfig.json",
-    "extraFileExtensions": [".json"]
+    "extraFileExtensions": [".json",".md"]
   }
 }

@@ -24,20 +24,19 @@
     "docusaurus-plugin-sass": "^0.2.5",
     "lottie-react": "^2.4.0",
     "prism-react-renderer": "^2.3.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.67.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.4"
   },
   "devDependencies": {
-    "@docusaurus/eslint-plugin": "^3.0.1",
+    "@docusaurus/eslint-plugin": "^3.4.0",
     "@docusaurus/module-type-aliases": "^3.4.0",
     "@docusaurus/tsconfig": "^3.4.0",
     "@docusaurus/types": "^3.4.0",
-    "@tsconfig/docusaurus": "^2.0.2",
-    "@zzjiaxiang/eslint-config": "^1.0.16",
-    "eslint": "^8.56.0",
+    "@tsconfig/docusaurus": "^2.0.3",
+    "eslint": "^9.4.0",
     "typescript": "^5.4.5",
-    "typescript-plugin-css-modules": "^5.0.2"
+    "typescript-plugin-css-modules": "^5.1.0"
   },
   "browserslist": {
     "production": [
