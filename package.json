@@ -30,11 +30,13 @@
   },
   "devDependencies": {
     "@docusaurus/eslint-plugin": "^3.0.1",
-    "@docusaurus/module-type-aliases": "3.0.1",
+    "@docusaurus/module-type-aliases": "^3.4.0",
+    "@docusaurus/tsconfig": "^3.4.0",
+    "@docusaurus/types": "^3.4.0",
     "@tsconfig/docusaurus": "^2.0.2",
     "@zzjiaxiang/eslint-config": "^1.0.16",
     "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
+    "typescript": "^5.4.5",
     "typescript-plugin-css-modules": "^5.0.2"
   },
   "browserslist": {

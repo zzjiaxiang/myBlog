@@ -1,6 +1,7 @@
 {
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
+    "jsx": "react",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
@@ -29,5 +30,6 @@
   "target": "es6",
   "module": "es2022",
   "moduleResolution": "Bundler",
+  "include": ["./**/*.ts","./**/*.tsx","./**/*.json"],
   "exclude": ["node_modules/**/*"]
 }

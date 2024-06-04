@@ -1,4 +1,9 @@
 {
   "root": true,
-  "extends": ["plugin:@docusaurus/recommended","@zzjiaxiang"]
+  "parser": "@typescript-eslint/parser",
+  "extends": ["plugin:@docusaurus/recommended"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [".json"]
+  }
 }
