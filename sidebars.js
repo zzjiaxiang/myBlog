@@ -68,6 +68,7 @@ const sidebars = {
         'note/http/httpCache',
         'note/http/httpVersion',
         'note/http/httpStatus',
+        'note/http/httpOther',
       ],
     },
     {
