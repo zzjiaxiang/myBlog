@@ -13,7 +13,7 @@ jobs:
 
       - name: Get the content of docsearch.json as config
         id: algolia_config
-        run: echo "config=$(cat docsearch.json | jq -r tostring)" >> $GITHUB_ENV"
+        run: echo "config=$(cat docsearch.json | jq -r tostring)" >> $GITHUB_ENV
 
       - name: Run algolia/docsearch-scraper image
         env:
