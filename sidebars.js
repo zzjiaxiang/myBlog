@@ -23,7 +23,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['note/ts/TypeScript内置数据类型'],
+      items: ['note/ts/partialtype','note/ts/Generics'],
     },
     {
       label: 'HTML',

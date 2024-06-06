@@ -1,4 +1,4 @@
-const themes = require('prism-react-renderer').themes
+const { themes } = require('prism-react-renderer')
 const lightCodeTheme = themes.github
 const darkCodeTheme = themes.dracula
 
@@ -59,14 +59,6 @@ const config = {
         respectPrefersColorScheme: true,
       },
       // see(https://docusaurus.io/zh-CN/docs/api/themes/configuration#announcement-bar)
-      // announcementBar: {
-      //   id: 'support_us',
-      //   content:
-      //     'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
-      //   backgroundColor: '#fafbfc',
-      //   textColor: '#091E42',
-      //   isCloseable: true,
-      // },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: '',
