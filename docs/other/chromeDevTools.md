@@ -9,7 +9,7 @@ last_update:
   author: ZhangJiaxiang
 ---
 
-这里列举一些能提高开发者效率的chrome-devtools调试技巧,暂时列举这么多,后面用到会继续加上.查看chrome-devtools每个版本的新功能点击[这里](https://developer.chrome.com/tags/new-in-devtools/). 许多内容参考了这本[小册](https://juejin.cn/book/6844733783166418958?enter_from=course_center&utm_source=course_center).
+这里列举一些能提高开发者效率的chrome-devtools调试技巧,暂时列举这么多,后面用到会继续加上.查看chrome-devtools每个版本的新功能点击[这里](https://developer.chrome.com/tags/new-in-devtools/).
 
 ## [简化了本地修改网络响应表头和内容 117](https://developer.chrome.com/docs/devtools/overrides?hl=zh-cn)
 
