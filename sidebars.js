@@ -14,6 +14,8 @@ const sidebars = {
         'note/js/event-delegation',
         'note/js/javascript-observer',
         'note/js/canvasapi',
+        'note/js/createProject',
+        'note/js/executionContext',
         'note/js/Equality_comparisons',
       ],
     },
@@ -23,7 +25,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['note/ts/partialtype','note/ts/Generics'],
+      items: ['note/ts/partialtype', 'note/ts/Generics'],
     },
     {
       label: 'HTML',
