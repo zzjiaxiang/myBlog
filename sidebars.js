@@ -14,6 +14,8 @@ const sidebars = {
         'note/js/event-delegation',
         'note/js/javascript-observer',
         'note/js/canvasapi',
+        'note/js/jsModule',
+        'note/js/Closures',
         'note/js/createProject',
         'note/js/executionContext',
         'note/js/Equality_comparisons',
