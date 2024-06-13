@@ -16,6 +16,8 @@ const sidebars = {
         'note/js/canvasapi',
         'note/js/jsModule',
         'note/js/Closures',
+        'note/js/Promise',
+        'note/js/definePropertyProxy',
         'note/js/createProject',
         'note/js/executionContext',
         'note/js/Equality_comparisons',
