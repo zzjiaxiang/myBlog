@@ -260,6 +260,153 @@ async function loadData(urls) {
 }
 ```
 
+## [Generator](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0)
+
+生成器是 ES6 中新增的一种函数控制、使用的方案，它可以让我们更加灵活的控制函数什么时候继续执行、暂停执
+行等
+
+- 生成器函数需要在 function 的后面加一个符号：`*`(箭头函数不能用来定义生成器函数。)
+- 生成器函数可以通过 yield 关键字来控制函数的执行流程.
+- 生成器函数的返回值是一个 Generator（生成器）
+
+在生成器中执行 return 语句会使生成器结束（即返回的对象的 done 属性将被设置为 true）。如果返回一个值，它将被设置为生成器返回的对象的 value 属性。与 return 语句类似，如果生成器内部抛出错误，生成器也会结束，除非在生成器的代码体内捕获该错误。当生成器结束后，后续 next() 调用不会执行生成器的任何代码，只会返回一个形如 {value: undefined, done: true} 的对象。
+
+```ts
+function* generator() {
+  yield 1
+  yield 2
+  return '返回的值'
+  yield 3
+}
+
+const gen = generator() // "Generator { }"
+
+console.log(gen.next()) // { value: 1, done: false }
+console.log(gen.next()) // { value: 2, done: false }
+console.log(gen.next()) // { value: '返回的值', done: true }
+console.log(gen.next()) // { value: undefined, done: true }
+```
+
+### Generator 与 async
+
+先从这一个需求说起：
+
+我们需要向服务器发送网络请求获取数据，
+一共需要发送三次请求；
+第二次的请求 url 依赖于第一次的结果；
+第三次的请求 url 依赖于第二次的结果
+
+```ts
+const requestData = (url) => {
+  const { promise, resolve } = Promise.withResolvers()
+  setTimeout(() => resolve(url), 1500)
+  return promise
+}
+
+const getData = () =>
+  requestData('first')
+    .then((res) => requestData(`${res} second`))
+    .then((res) => requestData(`${res} third`))
+    .then((res) => console.log(res))
+```
+
+学习了 promise,也许会这么写,但是这样的链式调用看起来很不舒服.
+
+试着用生成器函数重写一下.
+
+```ts
+function* getData() {
+  const first = yield requestData('first')
+  const second = yield requestData(`${first} second`)
+  const third = yield requestData(`${second} third`)
+  console.log(third)
+}
+const iterator = getData()
+iterator.next().value.then((res) => {
+  iterator.next(res).value.then((res) => {
+    iterator.next(res).value.then((res) => {
+      iterator.next(res)
+    })
+  })
+})
+```
+
+不过这么写看起来还不如 promise 的链式调用.
+
+我们封装一个 execGenerator,自动执行生成器函数,来代替上面的写法.
+
+```ts
+function* getData() {
+  const first = yield requestData('first')
+  const second = yield requestData(`${first} second`)
+  const third = yield requestData(`${second} third`)
+  console.log(third)
+}
+
+const execGenerator = (genFn) => {
+  const generator = genFn()
+  const exec = (res) => {
+    const result = generator.next(res)
+    const { done, value } = result
+    if (done) {
+      return value
+    } else {
+      value.then(exec)
+    }
+  }
+  exec()
+}
+execGenerator(getData)
+```
+
+execGenerator 这个工具函数没有考虑错误处理,以及 yield 后面跟的不是 promise 的情况.
+
+但是基本上模拟了 Generator 函数的自动执行流程.实际上已经有封装好的库,可以参考[co](https://github.com/tj/co)
+
+```ts
+const co = require('co')
+
+function* getData() {
+  const first = yield requestData('first')
+  const second = yield requestData(`${first} second`)
+  const third = yield requestData(`${second} third`)
+  console.log(third)
+}
+
+co(getData)
+```
+
+发没发现这样的写法和我们使用 async 时很像
+
+```ts
+const getData = async () => {
+  const first = await requestData('first')
+  const second = await requestData(`${first} second`)
+  const third = await requestData(`${second} third`)
+  console.log(third)
+}
+
+getData()
+```
+
+其实 async 函数的实现原理，就是将 Generator 函数和自动执行器，包装在一个函数里。
+
+```ts
+async function fn(args) {
+  // ...
+}
+
+function fn(args) {
+  return spawn(function* () {
+    // ...
+  })
+}
+```
+
+spawn 函数指的是自动执行器，就比如说 co。
+
+再加上 async 函数返回一个 Promise 对象，你也可以理解为 async 函数是基于 Promise 和 Generator 的一层封装。
+
 ## 红绿灯问题
 
 题目：红灯三秒亮一次，绿灯一秒亮一次，黄灯 2 秒亮一次；如何让三个灯不断交替重复亮灯？（用 Promse 实现）
@@ -312,5 +459,5 @@ const run = async () => {
 ## 参考
 
 [https://github.com/mqyqingfeng/Blog/issues/98](https://github.com/mqyqingfeng/Blog/issues/98)
-
+[https://github.com/mqyqingfeng/Blog/issues/99](https://github.com/mqyqingfeng/Blog/issues/99)
 [https://github.com/mqyqingfeng/Blog/issues/100](https://github.com/mqyqingfeng/Blog/issues/100)
