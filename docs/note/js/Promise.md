@@ -269,7 +269,7 @@ async function loadData(urls) {
 - 生成器函数可以通过 yield 关键字来控制函数的执行流程.
 - 生成器函数的返回值是一个 Generator（生成器）
 
-在生成器中执行 return 语句会使生成器结束（即返回的对象的 done 属性将被设置为 true）。如果返回一个值，它将被设置为生成器返回的对象的 value 属性。与 return 语句类似，如果生成器内部抛出错误，生成器也会结束，除非在生成器的代码体内捕获该错误。当生成器结束后，后续 next() 调用不会执行生成器的任何代码，只会返回一个形如 {value: undefined, done: true} 的对象。
+在生成器中执行 return 语句会使生成器结束（即返回的对象的 done 属性将被设置为 true）。如果返回一个值，它将被设置为生成器返回的对象的 value 属性。与 return 语句类似，如果生成器内部抛出错误，生成器也会结束，除非在生成器的代码体内捕获该错误。当生成器结束后，后续 next() 调用不会执行生成器的任何代码，只会返回一个形如 `{value: undefined, done: true} `的对象。
 
 ```ts
 function* generator() {
