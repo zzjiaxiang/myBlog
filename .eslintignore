@@ -6,3 +6,5 @@ yarn.lock
 package.json
 .gitignore
 *.md
+*.html
+tsconfig.json

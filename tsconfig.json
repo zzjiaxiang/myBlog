@@ -30,6 +30,6 @@
   "target": "es6",
   "module": "es2022",
   "moduleResolution": "Bundler",
-  "include": ["./**/*.ts","./**/*.tsx","./**/*.json","./**/*.md"],
+  "include": ["./**/*.ts","./**/*.tsx","./**/*.json","./**/*.md","./**/*.js"],
   "exclude": ["node_modules/**/*"]
 }

@@ -17,6 +17,7 @@ const sidebars = {
         'note/js/jsModule',
         'note/js/Closures',
         'note/js/Promise',
+        'note/js/vueReactivity',
         'note/js/definePropertyProxy',
         'note/js/createProject',
         'note/js/executionContext',
