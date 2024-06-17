@@ -5,8 +5,9 @@ tags: [vue响应式原理]
 keywords: [vue响应式原理]
 description: vue响应式原理
 last_update:
-  date: 6/15/2024
+  date: 6/18/2024
   author: ZhangJiaxiang
+
 ---
 
 ## vue 2
