@@ -100,4 +100,4 @@ const sidebars = {
   ],
 }
 
-export { sidebars }
+module.exports = sidebars
