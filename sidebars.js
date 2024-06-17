@@ -17,7 +17,6 @@ const sidebars = {
         'note/js/jsModule',
         'note/js/Closures',
         'note/js/Promise',
-        'note/js/vueReactivity',
         'note/js/definePropertyProxy',
         'note/js/createProject',
         'note/js/executionContext',
@@ -31,6 +30,14 @@ const sidebars = {
         type: 'generated-index',
       },
       items: ['note/ts/partialtype', 'note/ts/Generics'],
+    },
+    {
+      label: 'Vue',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: ['note/vue/vueReactivity'],
     },
     {
       label: 'HTML',
@@ -93,4 +100,4 @@ const sidebars = {
   ],
 }
 
-module.exports = sidebars
+export { sidebars }
