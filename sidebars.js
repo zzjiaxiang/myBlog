@@ -37,7 +37,11 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['note/vue/vueReactivity','note/vue/createApp'],
+      items: [
+        'note/vue/vueReactivity',
+        'note/vue/createApp',
+        'note/vue/vueDiff',
+      ],
     },
     {
       label: 'HTML',
