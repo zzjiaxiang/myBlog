@@ -41,6 +41,7 @@ const sidebars = {
         'note/vue/vueReactivity',
         'note/vue/createApp',
         'note/vue/vueDiff',
+        'note/vue/vueCompiler',
       ],
     },
     {
