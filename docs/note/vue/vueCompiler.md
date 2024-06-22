@@ -107,3 +107,28 @@ compileStyleAsync 根据是否有 scoped 给 descriptor 里面的 style 加上�
 ```js
 '\n.container[data-v-9551a707] {\n  height: 100%;\n  width: 100%;\n  display: grid;\n  overflow: hidden;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  grid-template-rows: repeat(2, minmax(0, 1fr));\n}\n'
 ```
+
+### transformMain
+
+transformMain 函数是将上面三个函数处理的结果拼接成最终的代码。
+![](https://png.zjiaxiang.cn/blog/202406221836199.jpg)
+我们可以从他的返回结果也可以看到 vue3 在编译时的优化
+
+- [静态提升](https://cn.vuejs.org/guide/extras/rendering-mechanism.html#static-hoisting)
+
+```js
+<script setup>
+import home from './page/home-page.vue'
+</script>
+
+<template>
+  <div>2222</div>
+  <home />
+</template>
+```
+
+上面的截图的结果就是这一个 sfc 文件编译后的产物,可以看到 Vue 编译器自动地会提升这部分(`<div>2222</div>`) vnode 创建函数到这个模板的渲染函数之外，并在每次渲染时都使用这份相同的 vnode，渲染器知道新旧 vnode 在这部分是完全相同的，所以会完全跳过对它们的差异比对。
+
+## 参考
+
+[vue3 的.vue 文件(SFC)编译过程](https://juejin.cn/post/7343139078486982710#heading-9)
