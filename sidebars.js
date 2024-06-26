@@ -58,7 +58,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['note/process-data/process-data-structure','note/process-data/sort','note/process-data/list'],
+      items: ['note/process-data/process-data-structure','note/process-data/sort','note/process-data/list','note/process-data/slidingWindow'],
     },
     {
       label: 'CSS',
