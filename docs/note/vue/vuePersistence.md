@@ -17,7 +17,7 @@ vue 的状态管理库不管是 vuex 还是 pinia,如果你不做处理的话,�
 
 介绍一个 pinia 持久化的插件,[pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/),使用起来很简单.
 
-src/stores/index.ts
+`src/stores/index.ts`
 
 ```js
 import { createPinia } from 'pinia'
@@ -31,7 +31,7 @@ export default pinia
 
 使用 piniaPluginPersistedstate 插件.
 
-src/main.ts
+`src/main.ts`
 
 ```js
 import pinia from '@/stores'
@@ -40,7 +40,7 @@ app.use(pinia)
 
 main 注册
 
-src/stores/user.ts
+`src/stores/user.ts`
 
 ```js
 import { defineStore } from 'pinia'
@@ -64,7 +64,7 @@ export const useUserStore = defineStore('user', {
 
 pinia 的用法可以看 pinia [官网](https://pinia.vuejs.org/).
 
-`pinia-plugin-persistedstate`配置查看[官网设置]((https://prazdevs.github.io/pinia-plugin-persistedstate/)).
+`pinia-plugin-persistedstate`配置查看[官网设置](https://prazdevs.github.io/pinia-plugin-persistedstate/).
 
 ### [vuex-persist](https://github.com/championswimmer/vuex-persist)
 
