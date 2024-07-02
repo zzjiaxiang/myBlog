@@ -101,6 +101,7 @@ const sidebars = {
         'other/docusaurus-syntax',
         'other/chrome-devtools',
         'other/WebPerformance',
+        'other/h5SelfAdaption',
       ],
     },
   ],
