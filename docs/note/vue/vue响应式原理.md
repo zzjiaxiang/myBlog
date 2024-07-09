@@ -443,7 +443,7 @@ effect 函数在运行这一段时`total = product.price * product.quantity`,因
 完整代码示例:
 
 ```js
-const targetMap = new WeakMap() // key: target, value: Map<key, Set<effect>> ,target:哪一个对象
+const targetMap = new WeakMap() // WeakMap<target, Map<key, Set<effect>>>
 let activeEffect = null // 正在运行的 effect
 const track = (target, key) => {
   if (activeEffect) {
@@ -710,9 +710,11 @@ Vue.set(vm.someObject, 'b', 2)
 
 另外 vue2 里面用 Dep 类将 notify 和 depend 函数以及 subscribers 封装起来了, 而 vue3 里面单独将 notify(trigger) 和 depend(tarck) 拆开来.
 
-为什么在 vue3 里面响应式的收集和触发要改名字呢?
 
-Evan You 在[vuemastery](https://www.vuemastery.com/courses/vue-3-reactivity/q-a-with-evan-you)这里面也解释过了.在实际上 notify 和 trigger, depend 和 tarck 他们仍在做同样的事情.在 vue2 里面是一个 Dep 类来封装的,可以说一个依赖实例被依赖(depend)或者说正在通知(notify)它的订阅者,那么在 vue3 里面已经没有了 Dep 类,可以说正在 track(跟踪)什么东西,而不是什么东西正在被依赖(depend).
+## 总结
+
+![vue响应式](https://png.zjiaxiang.cn/blog/202407091740558.jpg)
+vue 使用的是[sfc](https://cn.vuejs.org/guide/scaling-up/sfc.html#introduction),在运行时 sfc 会被编译为 render 函数(render 会生成页面上真实的元素).render 函数会在 effect 中执行,在执行 render 函数的过程中会访问到响应式的变量,如:`state.count`,因为它是一个代理对象所以会触发 getter ,在这里收集到 count 的依赖关系(保存当前的 effect),当我们修改响应式变量的时候,如:`state.count++`,触发 setter,通知依赖更新,调用和 count 有关的所有 effect().
 
 ## 参考
 
