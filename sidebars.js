@@ -21,6 +21,7 @@ const sidebars = {
         'note/js/createProject',
         'note/js/executionContext',
         'note/js/Equality_comparisons',
+        'note/js/eventLoop',
       ],
     },
     {
@@ -42,7 +43,7 @@ const sidebars = {
         'note/vue/createApp',
         'note/vue/vueDiff',
         'note/vue/vueCompiler',
-        'note/vue/vuePersistence'
+        'note/vue/vuePersistence',
       ],
     },
     {
@@ -59,7 +60,12 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['note/process-data/process-data-structure','note/process-data/sort','note/process-data/list','note/process-data/slidingWindow'],
+      items: [
+        'note/process-data/process-data-structure',
+        'note/process-data/sort',
+        'note/process-data/list',
+        'note/process-data/slidingWindow',
+      ],
     },
     {
       label: 'CSS',
@@ -102,6 +108,7 @@ const sidebars = {
         'other/chrome-devtools',
         'other/WebPerformance',
         'other/h5SelfAdaption',
+        'other/developSkill',
       ],
     },
   ],
