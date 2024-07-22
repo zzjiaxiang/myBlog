@@ -65,6 +65,7 @@ const sidebars = {
         'note/process-data/sort',
         'note/process-data/list',
         'note/process-data/slidingWindow',
+        'note/process-data/doublePointer'
       ],
     },
     {

@@ -458,6 +458,7 @@ const run = async () => {
 
 ## 参考
 
-[https://github.com/mqyqingfeng/Blog/issues/98](https://github.com/mqyqingfeng/Blog/issues/98)
-[https://github.com/mqyqingfeng/Blog/issues/99](https://github.com/mqyqingfeng/Blog/issues/99)
-[https://github.com/mqyqingfeng/Blog/issues/100](https://github.com/mqyqingfeng/Blog/issues/100)
+ - [ES6 系列之我们来聊聊 Promise](https://github.com/mqyqingfeng/Blog/issues/98)
+ - [ES6 系列之 Generator 的自动执行](https://github.com/mqyqingfeng/Blog/issues/99)
+ - [ES6 系列之我们来聊聊 Async](https://github.com/mqyqingfeng/Blog/issues/100)
+ - [mozilla await](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await)
