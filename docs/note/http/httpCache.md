@@ -11,19 +11,17 @@ last_update:
 
 ### 先简单介绍一下http缓存,[更新策略](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Conditional_requests#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF)
 
-![http 没有缓存或者缓存为空](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Conditional_requests/cache1.png)
-
+![http 没有缓存或者缓存为空](https://png.zjiaxiang.cn/blog/202407231824125.png)
 假如缓存为空，或者是没有缓存的话，被请求资源会以状态码 200 OK 返回。验证器会同资源一起返回，它们出现在首部字段中。在这个例子中， Last-Modified 与 ETag 都被返回，不过如果只返回其中的一个也是可以的。这些验证器会同资源一起被缓存起来（与所有的首部一样），并在在缓存失效的时候用来发起条件式请求。
 
 只要缓存未失效，就不会发起任何请求。但是一旦失效——主要是由 [Cache-Control](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control) 首部控制——客户端就不会采用缓存值而是发起条件式请求。验证器的值会用作 If-Modified-Since 和 If-Match 首部字段的参数。
 
 假如资源未发生变化，服务器就返回状态码为 304 Not Modified 的响应。这样相当于对缓存资源进行了刷新，而客户端则采用被缓存的资源。尽管这里有一次请求/响应往返会消耗一定的资源，但是这样做比将整个资源通过网络再传输一遍更高效。
 
-![使用缓存](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Conditional_requests/httpcache2.png)
-
+![使用缓存](https://png.zjiaxiang.cn/blog/202407231826198.png)
 假如资源发生了变化，服务器就直接返回 200 OK 响应码，连同新版本的资源，就像是没有应用条件式请求一样；客户端则采用新版本资源（并将其缓存起来）。
 
-![新缓存](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Conditional_requests/httpcache3.png)
+![新缓存](https://png.zjiaxiang.cn/blog/202407231827857.png)
 
 #### [Cache-Control](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control)
 
@@ -50,4 +48,4 @@ Cache-Control 通用消息头字段，被用于在 http 请求和响应中，通
 
 
 ### [参考](https://web.dev/articles/http-cache?hl=zh-cn#browser-compatibility)
-### [Google 如何利用“在重新验证时过时”功能提升广告效果](https://web.dev/case-studies/ads-case-study-stale-while-revalidate?hl=zh-cn)
+- [Google 如何利用“在重新验证时过时”功能提升广告效果](https://web.dev/case-studies/ads-case-study-stale-while-revalidate?hl=zh-cn)
