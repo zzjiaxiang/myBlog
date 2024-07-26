@@ -69,6 +69,16 @@ const sidebars = {
       ],
     },
     {
+      label: '组件实现',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'note/components/CountDown',
+      ],
+    },
+    {
       label: 'CSS',
       type: 'category',
       link: {
