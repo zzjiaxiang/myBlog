@@ -551,6 +551,14 @@ const ref = (raw) => {
 
 ![](https://png.zjiaxiang.cn/blog/202406170209111.jpg)
 
+```js
+export const toReactive = <T extends unknown>(value: T): T =>
+  isObject(value) ? reactive(value) : value
+
+```
+
+可以看到 set value 时会判断下是否为对象,是对象的话就调用 reactive 方法.
+
 ### computed 实现原理
 
 一般我们这么使用 computed:
@@ -709,7 +717,6 @@ Vue.set(vm.someObject, 'b', 2)
 使用 Proxy,就不用担心上面的问题.
 
 另外 vue2 里面用 Dep 类将 notify 和 depend 函数以及 subscribers 封装起来了, 而 vue3 里面单独将 notify(trigger) 和 depend(tarck) 拆开来.
-
 
 ## 总结
 

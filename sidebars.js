@@ -44,6 +44,7 @@ const sidebars = {
         'note/vue/vueDiff',
         'note/vue/vueCompiler',
         'note/vue/vuePersistence',
+        'note/vue/vueRouter'
       ],
     },
     {
