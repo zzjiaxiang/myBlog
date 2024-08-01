@@ -133,3 +133,4 @@ import home from './page/home-page.vue'
 
 - [vue3 的.vue 文件(SFC)编译过程](https://juejin.cn/post/7343139078486982710#heading-9)
 - [Vue.js 核心团队成员 Jinjiang 分享「深入理解单文件组件编译」](https://www.bilibili.com/video/BV1Zb421n7dR/?spm_id_from=333.788)
+- [vue3编译原理揭秘](https://vue-compiler.iamouyang.cn/)

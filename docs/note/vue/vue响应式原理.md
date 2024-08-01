@@ -598,6 +598,38 @@ effect(() => {
 
 这里的实现只实现了只读的计算属性.
 
+源码路径 `packages/reactivity/src/computed.ts`
+![](https://png.zjiaxiang.cn/blog/202408010050224.png)
+可以看到它利用的是 ReactiveEffect 类来进行依赖收集(第一个参数是 getter 为响应式依赖,第二个是响应式依赖发生改变后执行的回调函数).
+![](https://png.zjiaxiang.cn/blog/202408010108033.png)
+这里简单的写了一个示例,跟着调用栈来看下 ReactiveEffect 具体调用过程
+![](https://png.zjiaxiang.cn/blog/202408010110123.png)
+加 1 时出发了响应式变量的 set value,这里面调用了 triggerRefValue 触发响应式,它里面又调用了 triggerEffects
+![](https://png.zjiaxiang.cn/blog/202408010113981.png)
+它里面 effect.trigger()这个函数正是 ReactiveEffect 传进来的第二个参数,通过调用栈可以看见.
+![](https://png.zjiaxiang.cn/blog/202408010115805.png)
+有删减:
+
+```js
+  get value() {
+    const self = toRaw(this)
+    if (
+      (!self._cacheable || self.effect.dirty) &&
+      hasChanged(self._value, (self._value = self.effect.run()!))
+    ) {
+      // 新旧值不一样,触发依赖更新
+      triggerRefValue(self, DirtyLevels.Dirty)
+    }
+    // 依赖收集
+    trackRefValue(self)
+    return self._value
+  }
+```
+
+ComputedRefImpl 里面有一个 `_value`属性保存着计算属性的值.使用计算属性的时候实际上就是读取它的 get value 这里面返回了 `self._value`.
+
+dirty(脏数据标识),ReactiveEffect 里面定义的一个属性,每次在依赖数据发生改变的时候,都会重新计算这个值,超过 0 就会重新执行`self.effect.run()`实际上就是调用了 ReactiveEffect 的 getter 函数第一个参数我们给 computed 传入的回调函数(这里相当于重新计算了计算属性的值)
+
 ### 测试 ref 和 computed
 
 上面实现了 ref 和 computed.
@@ -693,6 +725,99 @@ salePrice 也可以直接使用 computed,但是这里为了测试 ref,就直接�
 
 ![](https://png.zjiaxiang.cn/blog/202406170244822.jpg)
 
+### watch 实现原理
+
+这里直接看下源码实现,路径在`packages/runtime-core/src/apiWatch.ts`文件里面.
+
+简化后的代码:
+
+```js
+function doWatch(
+  source: WatchSource | WatchSource[] | WatchEffect | object,
+  cb: WatchCallback | null,
+  { immediate, deep, flush, once, onTrack, onTrigger }: WatchOptions = EMPTY_OBJ
+): WatchStopHandle {
+  // 组装getter
+  let getter: () => any
+  if (isRef(source)) {
+    getter = () => source.value
+  } else if (isReactive(source)) {
+  } else if (isArray(source)) {
+  } else if (isFunction(source)) {
+  }
+  //组装job
+  const job: SchedulerJob = () => {
+    if (!effect.active || !effect.dirty) {
+      return
+    }
+    if (cb) {
+      // watch(source, cb)
+      const newValue = effect.run()
+    } else {
+      // watchEffect
+      effect.run()
+    }
+  }
+  // 组装scheduler
+  let scheduler: EffectScheduler
+  if (flush === 'sync') {
+    scheduler = job as any // the scheduler function gets called directly
+  } else if (flush === 'post') {
+    scheduler = () => queuePostRenderEffect(job, instance && instance.suspense)
+  } else {
+    // default: 'pre'
+    job.pre = true
+    scheduler = () => queueJob(job)
+  }
+  // 开启侦听,侦听的是getter函数也就是传入的第一个参数
+  const effect = new ReactiveEffect(getter, NOOP, scheduler)
+
+  // initial run
+  if (cb) {
+    if (immediate) {
+      job()
+    } else {
+      oldValue = effect.run()
+    }
+  } else if (flush === 'post') {
+    queuePostRenderEffect(effect.run.bind(effect))
+  } else {
+    effect.run()
+  }
+  const unwatch = () => {
+    effect.stop()
+  }
+  return unwatch
+}
+
+```
+
+主要分为一下几部份:
+
+1. 根据 source 的不同类型，标准化包装成 getter 函数.
+2. job 负责执行 effect.run（即执行 getter 函数重新收集依赖）和 cb(job 在 scheduler 中被调用).
+3. scheduler 用于控制 job 的执行时机，scheduler 会在对应的时机执行 job，该时机取决于 options 的 flush 参数（pre、sync、post）
+4. 根据传入的配置开启侦听.
+5. 返回停止侦听函数.
+
+watch 的响应式是通过 ReactiveEffect 来实现的.
+
+1. ReactiveEffect 创建，接受 fn 和 scheduler 参数。ReactiveEffect 被创建时，会立即执行 fn
+2. 当 fn 函数中使用到响应式变量（如 ref）时，该响应式变量就会用数组收集 ReactiveEffect 对象的引用.
+3. 当响应式变量被改变时，会触发所有的 ReactiveEffect 对象.
+
+![](https://png.zjiaxiang.cn/blog/202408012356890.png)
+会在 triggerEffects 时将 effect.scheduler 加入 queueEffectSchedulers.最后 resetScheduling,也就是执行所有的 scheduler
+
+```js
+export function resetScheduling() {
+  pauseScheduleStack--
+  while (!pauseScheduleStack && queueEffectSchedulers.length) {
+    queueEffectSchedulers.shift()!()
+  }
+}
+```
+
 ## 对比 vue2 和 vue3
 
 至此,我们观察实现 **03-mini-observer** 和 **05-activeEffect(优化)**,发现响应式的实现很类似.数据的劫持一个是用的 Proxy,一个是用 Object.defineProperty.
@@ -729,3 +854,5 @@ vue 使用的是[sfc](https://cn.vuejs.org/guide/scaling-up/sfc.html#introductio
 - [vue-advanced-workshop](https://github.com/d-levin/vue-advanced-workshop)
 - [vue-3-reactivity-Code](https://github.com/Code-Pop/vue-3-reactivity)
 - [answershuto/learnVue](https://github.com/answershuto/learnVue/blob/master/docs/%E4%BE%9D%E8%B5%96%E6%94%B6%E9%9B%86.MarkDown)
+- [Vue3 Watch API 到底是怎么实现的？](https://developer.aliyun.com/article/1245960)
+- [vue3 响应式是如何实现的？](https://juejin.cn/post/7048970987500470279?spm=a2c6h.12873639.article-detail.8.38b75e886YYl2v#heading-10)
