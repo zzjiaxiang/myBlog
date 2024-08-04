@@ -121,6 +121,7 @@ const sidebars = {
         'other/WebPerformance',
         'other/h5SelfAdaption',
         'other/developSkill',
+        'other/git'
       ],
     },
   ],
