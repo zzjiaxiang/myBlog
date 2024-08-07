@@ -1,6 +1,6 @@
 {
   "name": "my-website",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -35,7 +35,7 @@
     "@docusaurus/types": "^3.4.0",
     "@tsconfig/docusaurus": "^2.0.3",
     "eslint": "^8.57.0",
-    "typescript": "^5.5.5",
+    "typescript": "^5.5.4",
     "@typescript-eslint/parser": "^8.0.1",
     "typescript-plugin-css-modules": "^5.1.0"
   },
