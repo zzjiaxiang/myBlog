@@ -2,6 +2,9 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "jsx": "react",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "module": "ESNext",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
@@ -27,9 +30,6 @@
     "importsNotUsedAsValues": "remove",
     "skipLibCheck": false
   },
-  "target": "es6",
-  "module": "es2022",
-  "moduleResolution": "Bundler",
   "include": ["./**/*.ts","./**/*.tsx","./**/*.json","./**/*.md","./**/*.js"],
   "exclude": ["node_modules/**/*"]
 }
