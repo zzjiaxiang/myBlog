@@ -65,6 +65,7 @@ const sidebars = {
       items: [
         'note/process-data/process-data-structure',
         'note/process-data/sort',
+        'note/process-data/writtenExamination',
         'note/process-data/list',
         'note/process-data/slidingWindow',
         'note/process-data/doublePointer'
