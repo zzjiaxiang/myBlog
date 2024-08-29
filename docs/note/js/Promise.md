@@ -11,13 +11,9 @@ last_update:
 
 ## Promise
 
-Promise 对象表示异步操作最终的完成（或失败）以及其结果值。
+Promise 是符合 [Promise/A+ 规范](https://promisesaplus.com/) 规范的 then 方法对象.规范主要定义了 then 方法的行为,比如:返回一个新的 Promise,这使得 Promise 可以链式调用;处理异步操作的结果等.
 
-一个 Promise 必然处于以下几种状态之一：
-
-- 待定（pending）：初始状态，既没有被兑现，也没有被拒绝。
-- 已兑现（fulfilled）：意味着操作成功完成。
-- 已拒绝（rejected）：意味着操作失败。
+ES6 引入了原生的 Promise 构造函数，可以在 JavaScript 中创建符合 Promise/A+ 规范的 Promise 对象,并且引入静态方法,以及 catch,finally 等方法。
 
 ### Promise 并发
 
@@ -458,7 +454,7 @@ const run = async () => {
 
 ## 参考
 
- - [ES6 系列之我们来聊聊 Promise](https://github.com/mqyqingfeng/Blog/issues/98)
- - [ES6 系列之 Generator 的自动执行](https://github.com/mqyqingfeng/Blog/issues/99)
- - [ES6 系列之我们来聊聊 Async](https://github.com/mqyqingfeng/Blog/issues/100)
- - [mozilla await](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await)
+- [ES6 系列之我们来聊聊 Promise](https://github.com/mqyqingfeng/Blog/issues/98)
+- [ES6 系列之 Generator 的自动执行](https://github.com/mqyqingfeng/Blog/issues/99)
+- [ES6 系列之我们来聊聊 Async](https://github.com/mqyqingfeng/Blog/issues/100)
+- [mozilla await](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await)

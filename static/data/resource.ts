@@ -413,6 +413,13 @@ const OTHER = [
     img: 'https://xlog.app/assets/logo.svg',
     link: 'https://xlog.app',
   },
+  {
+    id: 6,
+    title: '免费公共API合集',
+    describe: '收集了许多免费公共API',
+    img: 'https://www.freepublicapis.com/favicon.ico',
+    link: 'https://www.freepublicapis.com/',
+  },
 ]
 const ECharts = [
   {
