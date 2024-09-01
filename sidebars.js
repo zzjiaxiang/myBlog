@@ -22,7 +22,7 @@ const sidebars = {
         'note/js/executionContext',
         'note/js/Equality_comparisons',
         'note/js/eventLoop',
-        'note/js/ES6add'
+        'note/js/ES6add',
       ],
     },
     {
@@ -45,7 +45,8 @@ const sidebars = {
         'note/vue/vueDiff',
         'note/vue/vueCompiler',
         'note/vue/vuePersistence',
-        'note/vue/vueRouter'
+        'note/vue/vueRouter',
+        'note/vue/injunctiveComponent',
       ],
     },
     {
@@ -68,7 +69,7 @@ const sidebars = {
         'note/process-data/writtenExamination',
         'note/process-data/list',
         'note/process-data/slidingWindow',
-        'note/process-data/doublePointer'
+        'note/process-data/doublePointer',
       ],
     },
     {
@@ -77,9 +78,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: [
-        'note/components/CountDown',
-      ],
+      items: ['note/components/CountDown'],
     },
     {
       label: 'CSS',
@@ -123,7 +122,7 @@ const sidebars = {
         'other/WebPerformance',
         'other/h5SelfAdaption',
         'other/developSkill',
-        'other/git'
+        'other/git',
       ],
     },
   ],
