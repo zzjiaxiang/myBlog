@@ -1,7 +1,7 @@
 {
-  "index_name": "zjiaxiang",
-  "start_urls": ["https://zjiaxiang.cn/"],
-  "sitemap_urls": ["https://zjiaxiang.cn/sitemap.xml"],
+  "index_name": "jiaxiang",
+  "start_urls": ["https://jiaxiang.me"],
+  "sitemap_urls": ["https://jiaxiang.me/sitemap.xml"],
   "stop_urls": ["/search"],
   "selectors": {
     "lvl0": {

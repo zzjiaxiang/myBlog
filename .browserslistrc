@@ -1,7 +1,7 @@
 # Browsers that we support
 
 [production]
-> 0.3% in CN and not dead
+> 1% in CN and not dead and not op_mini all
 
 [development]
 last 1 chrome version

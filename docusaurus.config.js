@@ -1,20 +1,23 @@
+const injectHtmlTags = require('./docusaurus-plugin/injectHtmlTags')
 const { themes } = require('prism-react-renderer')
-const lightCodeTheme = themes.github
-const darkCodeTheme = themes.dracula
+const { github: theme, dracula: darkTheme } = themes
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'zjx Site',
   tagline: 'zjx blog',
   favicon: 'https://png.zjiaxiang.cn/wenjian/myIcon.webp',
-  url: 'https://www.zjiaxiang.cn',
+  url: 'https://www.jiaxiang.me',
   baseUrl: '/',
   organizationName: 'zzjiaxiang',
   projectName: 'myBlog',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    'docusaurus-plugin-sass',
+    ['./docusaurus-plugin/injectHtmlTags.js', {}],
+  ],
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['en', 'zh-CN'],
@@ -130,14 +133,14 @@ const config = {
         copyright: `<a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2023001423号-1</a>`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme,
+        darkTheme,
         defaultLanguage: 'javascript',
       },
       algolia: {
         appId: 'BVQJGT9WCV',
         apiKey: 'f0f5fe6ade9f5fab830487a39130661c',
-        indexName: 'zjiaxiang',
+        indexName: 'jiaxiang',
       },
     }),
 }
