@@ -1,4 +1,3 @@
-const injectHtmlTags = require('./docusaurus-plugin/injectHtmlTags')
 const { themes } = require('prism-react-renderer')
 const { github: theme, dracula: darkTheme } = themes
 

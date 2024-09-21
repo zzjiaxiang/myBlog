@@ -6,6 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "analyzer": "docusaurus build --bundle-analyzer",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -34,9 +35,9 @@
     "@docusaurus/tsconfig": "^3.5.2",
     "@docusaurus/types": "^3.5.2",
     "@tsconfig/docusaurus": "^2.0.3",
+    "@typescript-eslint/parser": "^8.0.1",
     "eslint": "^8.57.0",
     "typescript": "^5.5.4",
-    "@typescript-eslint/parser": "^8.0.1",
     "typescript-plugin-css-modules": "^5.1.0"
   },
   "engines": {
