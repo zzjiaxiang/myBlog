@@ -123,6 +123,7 @@ const sidebars = {
         'other/h5SelfAdaption',
         'other/developSkill',
         'other/git',
+        'other/docusaurus-optimization',
       ],
     },
   ],
