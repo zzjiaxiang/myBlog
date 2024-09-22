@@ -15,8 +15,8 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   plugins: [
     'docusaurus-plugin-sass',
-    ['./docusaurus-plugin/injectHtmlTags.js', {}],
-    ['./docusaurus-plugin/webpack.js',{}],
+    './docusaurus-plugin/injectHtmlTags.js',
+    './docusaurus-plugin/webpack.js',
   ],
   i18n: {
     defaultLocale: 'zh-CN',
