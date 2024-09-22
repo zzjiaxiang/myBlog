@@ -12,7 +12,7 @@ module.exports = (context, options) => ({
                 chunks: 'all',
               },
               lottie: {
-                test: /[\\/]node_modules[\\/]lottie-react[\\/]/,
+                test: /[\\/]node_modules[\\/]lottie-web[\\/]/,
                 name: 'lottie-vendors',
                 chunks: 'all',
               },

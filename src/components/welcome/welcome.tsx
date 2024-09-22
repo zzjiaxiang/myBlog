@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './welcome.module.css'
 import BirdButton from '../BirdButton/index'
 
-interface MyComponentProps {
+interface WelcomeProps {
   className?: string
 }
 
-const Welcome: React.FC<MyComponentProps> = ({ className }) => (
+const Welcome: React.FC<WelcomeProps> = ({ className }) => (
   <div className={`${styles.main} ${className}`}>
     <div className={styles.textWarp}>
       <p className={styles.text}>welcome! </p> 👏
