@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import Layout from '@theme/Layout'
 import styles from './home.module.css'
 import Welcome from '../components/welcome/welcome'
