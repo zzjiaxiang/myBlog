@@ -34,6 +34,14 @@ const sidebars = {
       items: ['note/ts/partialtype', 'note/ts/Generics'],
     },
     {
+      label: 'React',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: ['note/react/react-playground'],
+    },
+    {
       label: 'Vue',
       type: 'category',
       link: {
