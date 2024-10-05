@@ -130,7 +130,6 @@ const config = {
             ],
           },
         ],
-        copyright: `<a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2023001423号-1</a>`,
       },
       prism: {
         theme,
