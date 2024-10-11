@@ -1,9 +1,9 @@
 ---
 id: react-playground
-title: react-playground
+title: playground
 tags: [react-playground]
 keywords: [react-playground, reactPlayground, react, playground]
-description: 泛型
+description: react-playground
 last_update:
   date: 3/10/2024
   author: ZhangJiaxiang

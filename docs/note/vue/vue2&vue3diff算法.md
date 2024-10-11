@@ -34,7 +34,7 @@ n1,n2 是传进来的 vnode(新旧)节点,前面几个判断处理了几点特�
 ![](https://png.zjiaxiang.cn/blog/202406201858165.jpg)
 分为两部份一部分是快速 patch,另外一部分是元素 children 只有文本、数组或无 children 的情况.展开`patchFlag > 0`的情况,我们发现,调用了一个 patchKeyedChildren 的方法.下面重点看一下这个方法.
 
-## diff (patchKeyedChildren)
+## vue3-diff (patchKeyedChildren)
 
 这部分就不截图了,贴上尤大的注释,这个函数做了这五件事.
 
@@ -205,3 +205,4 @@ Vue 3 中引入了 最长递增子序列(第 5 步) 的方式来 替代双端对
 
 - [Vue2 diff 算法图解](https://segmentfault.com/a/1190000043632772#item-6-10)
 - [Vue3 源码解析（五）：Patch 算法](https://juejin.cn/post/6968585717924495368#heading-8)
+- [Virtual DOM 的优化](https://xypisces.github.io/guide/virtualDom.html#virtual-dom%E7%9A%84%E4%BC%98%E5%8C%96)
