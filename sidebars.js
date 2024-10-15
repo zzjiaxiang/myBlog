@@ -23,6 +23,7 @@ const sidebars = {
         'note/js/Equality_comparisons',
         'note/js/eventLoop',
         'note/js/ES6add',
+        'note/js/multiLabelCommunication',
       ],
     },
     {
