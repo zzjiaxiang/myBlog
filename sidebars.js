@@ -40,7 +40,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      items: ['note/react/react-playground', 'note/react/react-render'],
+      items: ['note/react/react-playground', 'note/react/react-render','note/react/react-hook'],
     },
     {
       label: 'Vue',
